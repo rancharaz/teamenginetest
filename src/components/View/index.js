@@ -30,7 +30,7 @@ const View = () => {
           {employeeList &&
             employeeList.map(employee => {
               // eslint-disable-next-line react/jsx-no-useless-fragment
-              const { id, firstName, surname } = employee;
+              const { id, firstName, surname, status } = employee;
               return (
                 <div key={id}>
                   <div>{firstName}</div>

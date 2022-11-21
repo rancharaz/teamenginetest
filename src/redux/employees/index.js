@@ -2,7 +2,9 @@
 
 /* employee reducer */
 import { createSlice } from "@reduxjs/toolkit";
+import * as yup from "yup";
 import EmployeesData from "./FakeData";
+
 // eslint-disable-next-line import/prefer-default-export
 export const employeeSlice = createSlice({
   // create states
@@ -17,14 +19,14 @@ export const employeeSlice = createSlice({
     addEmployee: (state, action) => {
       // write code for adding user
       state.value.push(action.payload);
-      alert("Employee created");
+      /* alert("Employee created"); */
     },
     deleteEmployee: (state, action) => {
       // eslint-disable-next-line no-param-reassign
       state.value = state.value.filter(
         employee => employee.id !== action.payload.id
       );
-      alert("Employee has been deleted");
+      /* alert("Employee has been deleted"); */
     },
     updateEmployee: (state, action) => {
       // eslint-disable-next-line array-callback-return

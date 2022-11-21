@@ -15,60 +15,113 @@ const Create = () => {
   const dispatch = useDispatch(addEmployee);
   const history = useHistory();
 
-  const [firstName, setName] = useState("");
-  const [username, setUsername] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [surname, setSurname] = useState("");
+  const [dob, setDob] = useState("");
+  const [status, setStatus] = useState("");
+  const [jobtitle, setJobTitle] = useState("");
 
   const employeeList = useSelector(state => state.employees.value);
+
+  const submitForm = useCallback(
+    employee => {
+      dispatch(
+        addEmployee({
+          id: employeeList[employeeList.length - 1].id + 1,
+          firstName,
+          surname,
+          dob,
+          status,
+          jobtitle,
+        })
+      );
+    },
+    [dispatch, dob, employeeList, firstName, jobtitle, status, surname]
+  );
 
   return (
     <>
       <Header>Create new employee</Header>
       <Formik
         validationSchema={formValidationSchema}
-        /* onSubmit={submitForm} */
+        onSubmit={submitForm}
         initialValues={{
           firstName: "",
           surname: "",
+          dob: "",
+          status: "",
+          jobtitle: "",
         }}
       >
         <Form>
           <Flex alignItems="center" justifyContent="center" height="100%">
             <Flex alignItems="left" direction="column" width="300px">
-              <FormikControl
+              <FormField
                 control="input"
                 name="firstName"
                 placeholder="First name"
                 onChange={event => {
-                  setName(event.target.value);
+                  setFirstName(event.target.value);
                 }}
               />
-              <FormikControl
+              <FormField
                 control="input"
                 name="surname"
                 placeholder="Surname"
                 onChange={event => {
-                  setUsername(event.target.value);
+                  setSurname(event.target.value);
                 }}
               />
-              <Button
-                data-cy="saveButton"
-                onClick={() => {
-                  // eslint-disable-next-line no-restricted-globals, no-undef
-                  dispatch(
-                    addEmployee({
-                      id: employeeList[employeeList.length - 1].id + 1,
-                      firstName,
-                      username,
-                    })
-                  );
+              <FormField
+                control="input"
+                name="dob"
+                placeholder="Date of Birth"
+                onChange={event => {
+                  setDob(event.target.value);
                 }}
-                type="submit"
-              >
-                Save
-              </Button>
-              <Button data-cy="backButton" onClick={() => history.goBack()}>
-                Back
-              </Button>
+              />
+              <FormField
+                control="input"
+                name="status"
+                placeholder="status"
+                onChange={event => {
+                  setStatus(event.target.value);
+                }}
+              />
+              <FormField
+                control="input"
+                name="jobtitle"
+                placeholder="Job title"
+                onChange={event => {
+                  setJobTitle(event.target.value);
+                }}
+              />
+              <div>
+                <Button
+                  data-cy="saveButton"
+                  onClick={() => {
+                    // eslint-disable-next-line no-restricted-globals, no-undef
+                    dispatch(
+                      addEmployee({
+                        id: employeeList[employeeList.length - 1].id + 1,
+                        firstName,
+                        surname,
+                        dob,
+                        status,
+                        jobtitle,
+                      })
+                    );
+                  }}
+                  type="submit"
+                >
+                  Save
+                </Button>
+              </div>
+              <div>
+                <Button data-cy="backButton" onClick={() => history.goBack()}>
+                  Back
+                </Button>
+              </div>
             </Flex>
           </Flex>
         </Form>

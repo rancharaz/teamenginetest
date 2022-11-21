@@ -11,23 +11,20 @@ const formValidationSchema = yup.object().shape({
     .trim()
     .max(255, "The maximum number of characters is 255")
     .required("Required"),
-  email: yup
-    .string()
-    .trim()
-    .max(255, "The maximum number of characters is 255")
-    .email("Invalid email address")
-    .required("Required"),
   dob: yup
     .string()
     .trim()
     .max(255, "The maximum number of characters is 255")
-    .email("Invalid date of birth")
     .required("Required"),
-  jobtitle: yup
+  status: yup
     .string()
     .trim()
     .max(255, "The maximum number of characters is 255")
-    .email("Invalid job title")
+    .required("Required"),
+  jobTitle: yup
+    .string()
+    .trim()
+    .max(255, "The maximum number of characters is 255")
     .required("Required"),
 });
 

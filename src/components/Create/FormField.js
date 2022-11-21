@@ -4,9 +4,9 @@ import TextField from "./styled/TextField";
 import ErrorMessage from "./styled/ErrorMessage";
 import { Box } from "../styled";
 
-const FormField = props => {
+const FormikControlText = props => {
   // eslint-disable-next-line no-unused-vars
-  const { name, placeholder, ...rest } = props;
+  const { name, control, placeholder, ...rest } = props;
   const { errors, touched } = useFormikContext();
   return (
     <Box marginBottom="md">
@@ -31,4 +31,4 @@ const FormField = props => {
   );
 };
 
-export default FormField;
+export default FormikControlText;
