@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable no-unused-vars */
 import React, { useCallback, useState, FormEvent } from "react";
 import { Form, Formik } from "formik";
@@ -46,17 +47,17 @@ const Create = () => {
         validationSchema={formValidationSchema}
         onSubmit={submitForm}
         initialValues={{
-          firstName: "",
-          surname: "",
-          dob: "",
-          status: "",
-          jobtitle: "",
+          firstName: "Test",
+          surname: "Test",
+          dob: "Test",
+          status: "Test",
+          jobtitle: "Test",
         }}
       >
         <Form>
           <Flex alignItems="center" justifyContent="center" height="100%">
             <Flex alignItems="left" direction="column" width="300px">
-              <FormField
+              <FormikControl
                 control="input"
                 name="firstName"
                 placeholder="First name"
@@ -64,7 +65,7 @@ const Create = () => {
                   setFirstName(event.target.value);
                 }}
               />
-              <FormField
+              <FormikControl
                 control="input"
                 name="surname"
                 placeholder="Surname"
@@ -72,7 +73,7 @@ const Create = () => {
                   setSurname(event.target.value);
                 }}
               />
-              <FormField
+              <FormikControl
                 control="input"
                 name="dob"
                 placeholder="Date of Birth"
@@ -80,7 +81,7 @@ const Create = () => {
                   setDob(event.target.value);
                 }}
               />
-              <FormField
+              <FormikControl
                 control="input"
                 name="status"
                 placeholder="status"
@@ -88,7 +89,7 @@ const Create = () => {
                   setStatus(event.target.value);
                 }}
               />
-              <FormField
+              <FormikControl
                 control="input"
                 name="jobtitle"
                 placeholder="Job title"
@@ -116,12 +117,11 @@ const Create = () => {
                 >
                   Save
                 </Button>
-              </div>
-              <div>
                 <Button data-cy="backButton" onClick={() => history.goBack()}>
                   Back
                 </Button>
               </div>
+
             </Flex>
           </Flex>
         </Form>

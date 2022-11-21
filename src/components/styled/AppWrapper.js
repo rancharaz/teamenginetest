@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+
 import styled from "styled-components";
 import theme from "./defaultTheme";
 
@@ -8,7 +10,7 @@ const AppWrapper = styled.div`
   padding-bottom: ${theme.spacings.md};
   display: block;
   background-color: #ffffff;
-  width: 600px;
+  width:2000px;
   border-radius: 10px;
   position: relative;
   top: 50%;

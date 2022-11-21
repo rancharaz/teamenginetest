@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+
 export default {
   spacings: {
     none: "0",

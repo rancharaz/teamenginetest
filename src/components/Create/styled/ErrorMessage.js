@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import styled from "styled-components";
 import { display, margin, padding, text } from "../../styled/utils";
 import theme from "../../styled/defaultTheme";

@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+
 import { css } from "styled-components";
 import theme from "./defaultTheme";
 

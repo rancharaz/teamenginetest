@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+
 import AppWrapper from "./AppWrapper";
 import Box from "./Box";
 import Button from "./Button";

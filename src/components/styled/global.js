@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+
 import { createGlobalStyle } from "styled-components";
 import theme from "./defaultTheme";
 

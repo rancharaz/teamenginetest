@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+
 import styled from "styled-components";
 import { detectValue, display, margin, padding } from "../../styled/utils";
 import theme from "../../styled/defaultTheme";

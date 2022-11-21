@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+
 import styled from "styled-components";
 import Box from "./Box";
 import theme from "./defaultTheme";

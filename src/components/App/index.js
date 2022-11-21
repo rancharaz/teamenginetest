@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import WebFont from "webfontloader";
@@ -5,6 +6,7 @@ import Overview from "../Overview";
 import Create from "../Create";
 import View from "../View";
 import { AppWrapper, GlobalStyle } from "../styled";
+
 
 WebFont.load({
   google: {
@@ -20,6 +22,7 @@ const App = () => {
           <Route path="/create" component={Create} />
           <Route path="/view" component={View} />
           <Route path="/" component={Overview} />
+
         </Switch>
       </AppWrapper>
       <GlobalStyle />

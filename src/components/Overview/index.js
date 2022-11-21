@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+
 import React from "react";
 import { useHistory } from "react-router";
 import { Button, Box, Flex, Header } from "../styled";

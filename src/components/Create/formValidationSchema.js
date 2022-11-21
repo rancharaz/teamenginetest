@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import * as yup from "yup";
 
 const formValidationSchema = yup.object().shape({

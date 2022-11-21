@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+
 import styled from "styled-components";
 import { display, padding, margin, height, flex, state, width } from "./utils";
 
